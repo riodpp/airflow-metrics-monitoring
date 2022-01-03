@@ -20,7 +20,8 @@ default_args = {
 with DAG(
     'dwe_sample_dag_2',
     access_control = {
-        'DWE' : {'can_edit', 'can_read'}
+        'DWE' : {'can_edit', 'can_read'},
+        'CDE' : {'can_read'}
     },
     default_args=default_args,
     description='A simple tutorial DAG',
